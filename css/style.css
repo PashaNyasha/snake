@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Bahnschrift', Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+    src: url('../fonts/Snake.ttf');
+    font-family: 'Snake';
+}
+
+@font-face {
+    src: url('../fonts/gamer.ttf');
+    font-family: 'Gamer';
+}
+
+.game {
+    width: 553px;
+    margin: 0 auto;
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.score-and-game-name {
+    border: 5px solid #000;
+    border-bottom: none;
+    width: inherit;
+    height: 50px;
+    line-height: 50px;
+    font-family: 'Gamer';
+    font-size: 35px;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    background: rgb(13, 214, 13);
+}
+
+.score-and-game-name #score {
+    float: left;
+    margin-left: 5px;
+}
+
+.score-and-game-name #game-name {
+    float: right;
+    margin-right: 5px;
+}
+
+canvas {
+    border: 5px solid;
+    position: relative;
+}
+
+.mobile-controls {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    margin: 10px auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mob-direct-button {
+    position: absolute;
+    display: block;
+    width: 75px;
+    height: 75px;
+    background: none;
+    border: 5px solid #000;
+    border-radius: 50%;
+    outline: none;
+    font: normal 55px 'Icofont';
+    text-align: center;
+    cursor: pointer;
+}
+
+.mob-direct-button:nth-of-type(1) {
+    top: 0;
+    line-height: 1px;
+}
+
+.mob-direct-button:nth-of-type(2) {
+    left: 0;
+}
+
+.mob-direct-button:nth-of-type(3) {
+    bottom: 0;
+}
+
+.mob-direct-button:nth-of-type(4) {
+    right: 0;
+}
+
+#pause {
+    bottom: 0;
+    margin-top: 30px;
+    width: 155px;
+    height: 70px;
+    font: normal 45px 'Gamer';
+    line-height: 70px;
+    outline: none;
+    background: gold;
+    border: 2px solid #000;
+}
+
+#pause:active {
+    transform: scale(.9);
+}
+
+.mob-direct-button:active {
+    color: lime;
+    border-color: lime;
+}
+
+.hide {
+    display: none;
+}
+
+@media screen and (min-width: 320px) and (max-width: 374px) {
+    .score-and-game-name {
+        height: 50px;
+        font-size: 35px;
+    }
+    .score-and-game-name #score {
+        margin-left: 5px;
+    }
+    .score-and-game-name #game-name {
+        margin-right: 5px;
+    }
+}
